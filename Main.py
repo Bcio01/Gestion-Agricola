@@ -20,16 +20,20 @@ def main(page: ft.Page):
         print("Tablas en la BD:", tablas)
         cursor.close()
         conexion.close()
-    
+
     # Manejo de rutas
     def route_change(route):
         page.views.clear()
 
+        
         if page.route == "/":
             page.views.append(LoginVista())
-            
 
+        # elif page.route == "/parcelas":
+        #     page.views.append(ParcelasVista())
+           
         page.update()
+
 
     page.on_route_change = route_change
     page.go("/")  # Inicia en login

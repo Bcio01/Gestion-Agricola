@@ -6,7 +6,7 @@ def crear_conexion():
         conexion = mysql.connector.connect(
             host="localhost",       
             user="root",           
-            password="admin123", 
+            password="", 
             database="gestion_agricola"
         )
         if conexion.is_connected():
